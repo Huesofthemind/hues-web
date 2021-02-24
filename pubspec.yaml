@@ -28,6 +28,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_search_bar: ^2.1.0
+  auto_size_text:
 
 dev_dependencies:
   flutter_test:
@@ -45,8 +47,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - web/assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -61,7 +63,30 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #   - family: Schyler
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: web/assets/fonts/Montserrat-Regular.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: Caveat
+      fonts:
+        - asset: web/assets/fonts/Caveat-Regular.ttf
+
+    - family: Satisfy
+      fonts:
+        - asset: web/assets/fonts/Satisfy-Regular.ttf
+    #       - asset: fonts/TrajanPro_Bold.ttf
+    #         weight: 700
+    - family: Nunito
+      fonts:
+        - asset: web/assets/fonts/Nunito-Regular.ttf
+        - asset: web/assets/fonts/Nunito-SemiBold.ttf
+          weight: 500
+        - asset: web/assets/fonts/Nunito-Bold.ttf
+          weight: 800
+
+          #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
