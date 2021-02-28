@@ -22,7 +22,7 @@ class MenuButton extends StatelessWidget {
           maxLines: 1,
           style: TextStyle(
             fontSize: ResponsiveWidget.isMediumScreen(context) ? 14 : 16,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
