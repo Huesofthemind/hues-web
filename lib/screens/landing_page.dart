@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:huesofthemind_web/responsive_widget.dart';
 import 'package:huesofthemind_web/screens/around_world.dart';
+import 'package:huesofthemind_web/screens/around_world_m.dart';
 import 'package:huesofthemind_web/screens/home_page.dart';
 import 'package:huesofthemind_web/screens/homepage_m.dart';
 import 'package:huesofthemind_web/screens/how_do_we_help.dart';
@@ -20,6 +21,7 @@ class _LandingPageState extends State<LandingPage> {
         children: ResponsiveWidget.isSmallScreen(context)
             ? [
                 HomePageM(),
+                AroundWorldM(),
               ]
             : [
                 HomePage(),
