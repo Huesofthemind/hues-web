@@ -91,9 +91,7 @@ class _HomePageState extends State<HomePage> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       key: _scaffoldKey,
-      appBar: !ResponsiveWidget.isSmallScreen(context)
-          ? searchBar.build(context)
-          : AppBar(), //TODO Mobile AppBar
+      appBar: searchBar.build(context),
       body: Stack(
         children: [
           Container(
