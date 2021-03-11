@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:huesofthemind_web/responsive_widget.dart';
 import 'package:huesofthemind_web/screens/around_world.dart';
-import 'package:huesofthemind_web/screens/around_world_m.dart';
 import 'package:huesofthemind_web/screens/home_page.dart';
-import 'package:huesofthemind_web/screens/homepage_m.dart';
-import 'package:huesofthemind_web/screens/how_do_we_help.dart';
+import 'package:huesofthemind_web/screens/how_do_we_help_1.dart';
+import 'package:huesofthemind_web/screens/how_do_we_help_2.dart';
+import 'package:huesofthemind_web/screens/phone/around_world_m.dart';
+import 'package:huesofthemind_web/screens/phone/homepage_m.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -27,6 +28,7 @@ class _LandingPageState extends State<LandingPage> {
                 HomePage(),
                 AroundTheWorld(),
                 HowDoWeHelp(),
+                HowDoWeHelp2(),
               ],
       ),
     );

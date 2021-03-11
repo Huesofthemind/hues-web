@@ -95,6 +95,13 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           Container(
+            width: size.width,
+            child: Image.asset(
+              "home_bg.png",
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
             padding: EdgeInsets.all(32),
             child: Row(
               children: [
@@ -196,19 +203,6 @@ class _HomePageState extends State<HomePage> {
                       )
                     : SizedBox.shrink(),
               ],
-            ),
-          ),
-          Positioned(
-            top: ResponsiveWidget.isLargeScreen(context)
-                ? size.height * 0.09
-                : size.height * 0.19,
-            left: size.width * 0.0005,
-            child: Container(
-              child: Image.asset(
-                'butter.png',
-                height: ResponsiveWidget.isLargeScreen(context) ? 100 : 80,
-                width: ResponsiveWidget.isLargeScreen(context) ? 100 : 80,
-              ),
             ),
           ),
         ],

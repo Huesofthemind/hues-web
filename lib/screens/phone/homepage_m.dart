@@ -144,62 +144,73 @@ class _HomePageMState extends State<HomePageM> {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              flex: 3,
-              child: Container(
-                padding: EdgeInsets.only(left: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Image.asset(
-                      '1.png',
-                      height: size.height * 0.5,
-                      width: size.width * 0.7,
-                    ),
-                  ],
-                ),
-              ),
+      body: Stack(
+        children: [
+          Container(
+            width: size.width,
+            child: Image.asset(
+              "home_bg.png",
+              fit: BoxFit.cover,
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                child: Column(
-                  children: [
-                    AutoSizeText(
-                      'WE HELP YOU HELP YOURSELF',
-                      maxLines: 2,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 32,
-                      ),
+          ),
+          Container(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Image.asset(
+                          '1.png',
+                          height: size.height * 0.5,
+                          width: size.width * 0.7,
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: size.height * 0.05,
-                    ),
-                    AutoSizeText(
-                      "Huesofthemind is a place to empower each other⁣⁣⁣⁣ by sharing, learning, coping & healing together⁣. We embrace and celebrate the hues of you.",
-                      textAlign: TextAlign.center,
-                      maxLines: 4,
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: kPrimaryColor,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
-              ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    child: Column(
+                      children: [
+                        AutoSizeText(
+                          'WE HELP YOU HELP YOURSELF',
+                          maxLines: 2,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 32,
+                          ),
+                        ),
+                        SizedBox(
+                          height: size.height * 0.05,
+                        ),
+                        AutoSizeText(
+                          "Huesofthemind is a place to empower each other⁣⁣⁣⁣ by sharing, learning, coping & healing together⁣. We embrace and celebrate the hues of you.",
+                          textAlign: TextAlign.center,
+                          maxLines: 4,
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: kPrimaryColor,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
