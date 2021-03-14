@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:huesofthemind_web/constants.dart';
+import 'package:huesofthemind_web/responsive_widget.dart';
 
 class HowDoWeHelpM extends StatelessWidget {
   @override
@@ -46,9 +47,11 @@ class HowDoWeHelpM extends StatelessWidget {
                               child: Image.asset('balloon.png'),
                             ),
                           ),
-                          SizedBox(
-                            height: size.height * 0.1,
-                          ),
+                          ResponsiveWidget.isTooSmallScreen(context)
+                              ? SizedBox.shrink()
+                              : SizedBox(
+                                  height: size.height * 0.1,
+                                ),
                           Expanded(
                             child: buildHowWeHelp(
                               image: 'workshop.png',

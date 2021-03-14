@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_search_bar/flutter_search_bar.dart';
 import 'package:huesofthemind_web/constants.dart';
+import 'package:huesofthemind_web/responsive_widget.dart';
 
 class HomePageM extends StatefulWidget {
   @override
@@ -66,6 +67,7 @@ class _HomePageMState extends State<HomePageM> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       key: _scaffoldKey,
       appBar: searchBar.build(context),
@@ -199,7 +201,9 @@ class _HomePageMState extends State<HomePageM> {
                           textAlign: TextAlign.center,
                           maxLines: 4,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: ResponsiveWidget.isTooSmallScreen(context)
+                                ? 16
+                                : 20,
                             color: kPrimaryColor,
                           ),
                         )

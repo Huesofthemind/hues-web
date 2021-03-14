@@ -16,45 +16,24 @@ class HowDoWeHelpM2 extends StatelessWidget {
       Container(
         padding: EdgeInsets.all(16),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Container(
-                      height: size.height * 0.9,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Expanded(
-                            child: buildHowWeHelp(
-                                image: 'campaign.png',
-                                title: 'Campaigns',
-                                content:
-                                    "We aim to foster a world where mental health is for everyone. In this venture, we collaborate with other organisations which resonate with the same goal as ours, to conduct Live sessions and social media campaigns to spread awareness."),
-                          ),
-                          Expanded(
-                            child: buildHowWeHelp(
-                              image: 'sharing.png',
-                              title: 'Sharing Spaces',
-                              content:
-                                  "We provide people a place to share their experiences by fostering a safe space. This is cathartic for the one sharing it and empowering for the community.",
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              child: Image.asset('people.png'),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
+            buildHowWeHelp(
+                image: 'campaign.png',
+                title: 'Campaigns',
+                content:
+                    "We aim to foster a world where mental health is for everyone. In this venture, we collaborate with other organisations which resonate with the same goal as ours, to conduct Live sessions and social media campaigns to spread awareness."),
+            buildHowWeHelp(
+              image: 'sharing.png',
+              title: 'Sharing Spaces',
+              content:
+                  "We provide people a place to share their experiences by fostering a safe space. This is cathartic for the one sharing it and empowering for the community.",
             ),
+            Container(
+              height: size.height * 0.2,
+              child: Image.asset('people.png'),
+            )
           ],
         ),
       ),

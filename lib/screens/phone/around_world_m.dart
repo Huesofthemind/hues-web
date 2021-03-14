@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:huesofthemind_web/responsive_widget.dart';
 
 import '../../constants.dart';
 
@@ -25,7 +26,7 @@ class AroundWorldM extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 32,
+                        fontSize: ResponsiveWidget.isTooSmallScreen(context)?26:32,
                       ),
                     ),
                   ),
