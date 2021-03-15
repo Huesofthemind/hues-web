@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:huesofthemind_web/responsive_widget.dart';
 import 'package:huesofthemind_web/screens/around_world.dart';
 import 'package:huesofthemind_web/screens/collab.dart';
+import 'package:huesofthemind_web/screens/donate.dart';
 import 'package:huesofthemind_web/screens/home_page.dart';
 import 'package:huesofthemind_web/screens/how_can_you_help.dart';
 import 'package:huesofthemind_web/screens/how_can_you_help_1.dart';
@@ -33,6 +34,7 @@ class _LandingPageState extends State<LandingPage> {
         scrollDirection: Axis.vertical,
         children: ResponsiveWidget.isSmallScreen(context)
             ? [
+              Donate(),
                 HowDoYouHelpM3(),
                 HowDoYouHelpM2(),
                 HowDoYouHelpM(),
@@ -53,6 +55,7 @@ class _LandingPageState extends State<LandingPage> {
                 Collab(),
                 HowDoYouHelp(),
                 HowDoYouHelp2(),
+                Donate(),
               ],
       ),
     );
