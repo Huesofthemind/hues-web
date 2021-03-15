@@ -3,6 +3,8 @@ import 'package:huesofthemind_web/responsive_widget.dart';
 import 'package:huesofthemind_web/screens/around_world.dart';
 import 'package:huesofthemind_web/screens/collab.dart';
 import 'package:huesofthemind_web/screens/home_page.dart';
+import 'package:huesofthemind_web/screens/how_can_you_help.dart';
+import 'package:huesofthemind_web/screens/how_can_you_help_1.dart';
 import 'package:huesofthemind_web/screens/how_do_we_help_1.dart';
 import 'package:huesofthemind_web/screens/how_do_we_help_2.dart';
 import 'package:huesofthemind_web/screens/impact.dart';
@@ -12,6 +14,9 @@ import 'package:huesofthemind_web/screens/phone/homepage_m.dart';
 import 'package:huesofthemind_web/screens/phone/how_do_we_help_m1.dart';
 import 'package:huesofthemind_web/screens/phone/how_do_we_help_m2.dart';
 import 'package:huesofthemind_web/screens/phone/how_do_we_help_m3.dart';
+import 'package:huesofthemind_web/screens/phone/how_do_you_help_m_1.dart';
+import 'package:huesofthemind_web/screens/phone/how_do_you_help_m_2.dart';
+import 'package:huesofthemind_web/screens/phone/how_do_you_help_m_3.dart';
 import 'package:huesofthemind_web/screens/phone/impact_m.dart';
 
 class LandingPage extends StatefulWidget {
@@ -28,6 +33,9 @@ class _LandingPageState extends State<LandingPage> {
         scrollDirection: Axis.vertical,
         children: ResponsiveWidget.isSmallScreen(context)
             ? [
+                HowDoYouHelpM3(),
+                HowDoYouHelpM2(),
+                HowDoYouHelpM(),
                 HomePageM(),
                 AroundWorldM(),
                 HowDoWeHelpM(),
@@ -43,6 +51,8 @@ class _LandingPageState extends State<LandingPage> {
                 HowDoWeHelp2(),
                 Impact(),
                 Collab(),
+                HowDoYouHelp(),
+                HowDoYouHelp2(),
               ],
       ),
     );

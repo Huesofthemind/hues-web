@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:huesofthemind_web/constants.dart';
 import 'package:huesofthemind_web/responsive_widget.dart';
 
-class HowDoWeHelpM extends StatelessWidget {
+class HowDoYouHelpM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,7 +26,7 @@ class HowDoWeHelpM extends StatelessWidget {
                   children: [
                     Center(
                       child: Text(
-                        'HOW DO WE HELP ?',
+                        'HOW CAN YOU HELP ?',
                         style: TextStyle(
                           color: kFontColor,
                           fontWeight: FontWeight.bold,
@@ -44,7 +44,7 @@ class HowDoWeHelpM extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Container(
-                              child: Image.asset('balloon.png'),
+                              child: Image.asset('rainbow.png'),
                             ),
                           ),
                           ResponsiveWidget.isTooSmallScreen(context)
@@ -55,9 +55,9 @@ class HowDoWeHelpM extends StatelessWidget {
                           Expanded(
                             child: buildHowWeHelp(
                               image: 'workshop.png',
-                              title: 'Workshops & Camps',
+                              title: 'Organise Workshop',
                               content:
-                                  "Through the use of structured experiences, group discussions and interactions, we hold dynamic, engaging and interactive sessions designed to provide participants with the opportunity to increase their awareness of mental health.",
+                                  "There is still a huge stigma around mental illness and we need to banish it. We can only do this through the use of structured experiences, group discussions and interactions.",
                             ),
                           )
                         ],
