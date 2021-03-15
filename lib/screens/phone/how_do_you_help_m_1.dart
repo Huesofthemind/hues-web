@@ -30,7 +30,7 @@ class HowDoYouHelpM extends StatelessWidget {
                         style: TextStyle(
                           color: kFontColor,
                           fontWeight: FontWeight.bold,
-                          fontSize: 32,
+                          fontSize: ResponsiveWidget.isTooSmallScreen(context)?24:32,
                         ),
                       ),
                     ),
